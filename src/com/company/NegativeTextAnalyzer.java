@@ -1,18 +1,16 @@
 package com.company;
 
-public class NegativeTextAnalyzer extends KeywordAnalyzer implements TextAnalyzer{
+class NegativeTextAnalyzer extends KeywordAnalyzer {
+    private static final String[] smile = new String[]{":(", "=(", ":|"};
+
     @Override
     protected String[] getKeywords() {
-        return new String[0];
+        return smile;
     }
 
     @Override
     protected Label getLabel() {
-        return null;
+        return Label.NEGATIVE_TEXT;
     }
 
-    @Override
-    public Label processText(String text) {
-        return null;
-    }
 }

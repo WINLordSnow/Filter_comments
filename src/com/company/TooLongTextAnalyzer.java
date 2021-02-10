@@ -1,8 +1,8 @@
 package com.company;
 
-public class TooLongTextAnalyzer implements TextAnalyzer{
-    private int maxLength;
-    TooLongTextAnalyzer(int maxLength) {
+class TooLongTextAnalyzer implements TextAnalyzer{
+    private final int maxLength;
+    public TooLongTextAnalyzer(int maxLength) {
         this.maxLength = maxLength;
     }
 

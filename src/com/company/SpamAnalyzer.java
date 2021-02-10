@@ -1,7 +1,7 @@
 package com.company;
 
-public class SpamAnalyzer extends KeywordAnalyzer implements TextAnalyzer{
-    private String[] keyWords;
+class SpamAnalyzer extends KeywordAnalyzer{
+    private final String[] keyWords;
 
     SpamAnalyzer(String[] keyWords) {
         this.keyWords = keyWords.clone();
@@ -14,11 +14,8 @@ public class SpamAnalyzer extends KeywordAnalyzer implements TextAnalyzer{
 
     @Override
     protected Label getLabel() {
-        return null;
+        return Label.SPAM;
     }
 
-    @Override
-    public Label processText(String text) {
-        return null;
-    }
 }
+
